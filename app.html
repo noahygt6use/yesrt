@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Head section -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>list</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+
+  <!-- CSS Style section -->
+  <style type="text/css">
+
+  Body {
+    background-color: burlywood;
+    font-size: 30pt;
+  }
+
+  input[type="button"] {
+    background-color: cadetblue;
+  }
+
+  nav {
+    background-color: cadetblue;
+    font-size: 15pt;
+  }
+  </style>  
+</head>
+
+<!-- Body Section-->
+<body>
+  
+  <p> Special To Do list</p> 
+  <br>
+  <input type="text" id="box" value="Type here to add task"/>
+  <br>
+  <input type="button" value="Add Item" onclick="addItem();"/>
+  <br>
+  <div id="list"></div>
+
+  <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreenf
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880332.80774106!2d-71.22819286076029!3d45.17039334664442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb01dde1d538ad5%3A0xd679cc6f6720a8d0!2sMaine!5e0!3m2!1sen!2sus!4v1679254270055!5m2!1sen!2sus">
+  </iframe>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.3037499799134!2d-70.51209928493464!3d41.38920940384581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52c3bc1067d8b%3A0xdb73b0d8f12236ee!2s51%20Dock%20St%2C%20Edgartown%2C%20MA%2002539!5e0!3m2!1sen!2sus!4v1679254745340!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23131.617209692362!2d-87.97437795804638!3d43.555460715308705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8804916905039f25%3A0xeeacb8b8509b0289!2sRandom%20Lake%2C%20WI%2053075!5e0!3m2!1sen!2sus!4v1679255866465!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<!-- Javascript Section: HTML Comment type-->
+<script>
+// JavaScript comment
+// NOTE: Comment syntax changes here! We are in javascript now
+
+// addItem function:
+//  This will add an item to the list of tasks
+function addItem() {
+  var newItem = document.createElement("div");
+  newItem.innerHTML = document.getElementById("box").value;
+  newItem.onclick = removeItem;
+  document.getElementById("list").appendChild(newItem);
+}
+
+// removeItem function:
+//   This will remove an item from the task list
+function removeItem(){
+  document.getElementById("list").removeChild(this);
+}
+
+</script>
+
+</body>
+</html>
