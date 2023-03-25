@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>site for stuf </title>
+    <style>
+        body {
+            background-color: darkcyan;
+        }
+        .password{ font-size: large;
+
+        }
+        p{color: brown;}
+        link{ color: brown;}
+    </style>
+</head>
+
+<body>
+    <div class="password">
+    <h1> To access the slack attack website please enter the password! </h1>
+    <br>
+<p><bold> type the password into this</bold></p>
+    <p> Password: <input id="passwordBox" type="password" />
+        <a href="app.html" onclick="return confirmPassword();">
+            To be redirected to the slack attack webpage please click this
+    </p></div>
+
+    <script>
+        function confirmPassword() {
+            var password = document.getElementById("passwordBox");
+            var passwordText = password.value;
+            if (passwordText == "slackattack1!") {
+                return true;
+            }
+            alert("Incorrect password, please try again");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
